@@ -1,0 +1,10 @@
+---
+desc: DC/OS diagnostics bundle analysis tool
+topics:
+  - dcos
+  - audit
+  - diagnostics
+help:
+  url: https://github.com/adyatlov/bun/blob/master/README.md
+  md: yes
+  inline: yes
