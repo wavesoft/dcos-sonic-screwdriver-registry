@@ -5,6 +5,6 @@ topics:
   - audit
   - diagnostics
 help:
-  url: https://github.com/adyatlov/bun/blob/master/README.md
+  url: https://raw.githubusercontent.com/adyatlov/bun/master/README.md
   md: yes
   inline: yes
