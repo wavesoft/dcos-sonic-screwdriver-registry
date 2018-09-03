@@ -7,3 +7,10 @@ artifacts:
       type: file
       url: https://github.com/adyatlov/bun/releases/download/v1.5.0/bun_darwin_amd64
       checksum: c715ea686f77e0d685de5211ca770b1d3678e7eaef33881945c1d308e04f39f0
+  - type: executable
+    platform: linux
+    arch: amd64
+    source:
+      type: file
+      url: //github.com/adyatlov/bun/releases/download/v1.5.0/bun_linux_amd64
+      checksum: 1d71be53db6203fba050b60918a5cdc07d66be2b3c10efac1efbae6a2ced12c1
