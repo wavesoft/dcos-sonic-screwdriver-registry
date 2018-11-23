@@ -2,7 +2,7 @@
 artifacts:
   - type: executable
     interpreter:
-      shell: python3
+      python: python3
       installPip: "."
     source:
       type: vcs/git

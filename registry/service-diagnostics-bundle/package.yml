@@ -1,0 +1,11 @@
+---
+desc: Script that gathers SDK-related service diagnostics artifacts.
+topics:
+  - testing
+  - audit
+  - service
+  - sdk
+help:
+  url: https://raw.githubusercontent.com/mesosphere/dcos-commons/master/tools/diagnostics/README.md
+  inline: yes
+  md: yes

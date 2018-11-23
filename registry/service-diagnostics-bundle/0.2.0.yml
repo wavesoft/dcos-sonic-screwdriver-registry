@@ -1,0 +1,13 @@
+---
+artifacts:
+  - type: executable
+    interpreter:
+      shell: bash
+    source:
+      type: file
+      url: https://infinity-artifacts.s3.amazonaws.com/dcos-commons/diagnostics/latest/create_service_diagnostics_bundle.sh
+      checksum: 02e76241029c2abb60fbf01a2d08c37d617b91f470e53c0e26ab151283cb613d
+    require:
+      - cmd: "docker"
+    installScript: "docker pull mesosphere/dcos-commons:diagnostics-v0.2.0-snapshot"
+    uninstallScript: "docker rmi mesosphere/dcos-commons:diagnostics-v0.2.0-snapshot"
