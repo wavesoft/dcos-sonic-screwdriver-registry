@@ -1,0 +1,11 @@
+---
+artifacts:
+  - type: executable
+    interpreter:
+      python: python3
+      installRequirements: "requirements.txt"
+      installPip: "."
+    source:
+      type: vcs/git
+      url: https://github.com/dcos/dcos-launch.git
+    entrypoint: "%TOOL%/python-venv/bin/dcos-launch"
