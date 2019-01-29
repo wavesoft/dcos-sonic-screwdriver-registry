@@ -1,0 +1,7 @@
+---
+desc: DC/OS cluster command-line utility
+topics:
+  - dcos
+  - cluster
+help:
+  url: https://docs.mesosphere.com/1.12/cli

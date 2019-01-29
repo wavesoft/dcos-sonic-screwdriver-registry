@@ -1,0 +1,16 @@
+---
+artifacts:
+  - type: executable
+    platform: darwin
+    arch: amd64
+    source:
+      type: file
+      url: https://downloads.dcos.io/binaries/cli/darwin/x86-64/dcos-1.11/dcos
+      checksum: 629ef4d5a4f4ff835694f2812c507bcfc1c70a52a29829cf66f93f253db57fec
+  - type: executable
+    platform: linux
+    arch: amd64
+    source:
+      type: file
+      url: https://downloads.dcos.io/binaries/cli/linux/x86-64/dcos-1.11/dcos
+      checksum: 60a20fbcb3f635bee212f1193e9260794a9280d6e63c06e7db7c80591697cf9c
