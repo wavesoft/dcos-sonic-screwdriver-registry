@@ -94,13 +94,18 @@ artifacts:
         image: registry/image-name
         tag: "1.2.3"
         dockerArgs: "-p 8080:8080"
+        multiCommand:
+          ...
     ```
 
     * `type`: Must be `"docker"`
     * `image`: The docker image to use
     * `tag`: The tag of the docker image to use
-    * `dockerArgs`: _(Optional)_ Additional arguments to pass on the docker daemon
     * `require`: _(Optional)_ One or more [Requirements](#requirement-types) that should be satisfied before selecting this artifact.
+    * `dockerArgs`: _(Optional)_ Additional arguments to pass on the docker daemon
+    * `setupScript`: _(Optional)_ Optional command(s) to run before launching the container.
+    * `teardownScript`: _(Optional)_ Optional command(s) to run after launching the container.
+    * `command`: _(Optional)_ The command to invoke in the container (defaults to `$*`, that translates to all the arguments the user has given)
 
 2. **Interpreted Artifact:** An interpreted artifact is using a system interpreter for it's execution and therefore is by default platform-agnostic.
     ```yaml
@@ -111,6 +116,8 @@ artifacts:
       source:
         ...
       entrypoint: dcos_ovhcloud_installer.py
+      environment:
+        VAR: value
     ```
 
     * `type`: Must be `"executable"`
@@ -119,6 +126,7 @@ artifacts:
     * `entrypoint`: _(Optional)_ If the `source` is an archive-like resource, this field defined where to find the tool
     * `require`: _(Optional)_ One or more [Requirements](#requirement-types) that should be satisfied before selecting this artifact.
     * `installScript`: _(Optional)_ A script to run within the tool directory after downloading it, that can be used to prepare the tool for execution.
+    * `environment`: _(Optional)_ one or more environment variables to define before running the script.
 
 2. **Executable Binary:** An executable binary is a machine-dependent artifact and therefore you have to specify the _platform_ and the cpu _architecture_ that it targets.
     ```yaml

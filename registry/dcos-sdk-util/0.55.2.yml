@@ -1,0 +1,22 @@
+---
+artifacts:
+  - type: docker
+    image: mesosphere/dcos-commons
+    tag: "0.55.2"
+    setupScript: |
+      CMD=""
+      case $1 in
+        init)
+          CMD="init $(pwd)"
+          shift
+          ;;
+        shell)
+          shift
+          ;;
+        *)
+          echo "Usage: $0 [init|shell]"
+          exit 1
+          ;;
+      esac
+    arguments: "-v $(pwd):$(pwd) -w $(pwd)"
+    command: "$CMD $*"
